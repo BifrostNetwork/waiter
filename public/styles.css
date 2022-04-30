@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Anton", sans-serif;
+}
+
+body {
+  background: linear-gradient(90deg, #d1ebff, #d1ffe5, #f7ffd1, #ffd1d2);
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.img-s {
+  max-width: 40px;
+}
+
+.img-m {
+  max-width: 50px;
+}
+
+.img-l {
+  max-width: 70px;
+}
+
+.background-img {
+  position: absolute;
+}
+
+#time-remaning {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+}
+
+#time-remaning * {
+  display: inline-block;
+  font-size: 3em;
+  color: #ffffff;
+  text-shadow: 0px 0px 10px #ff6e73;
+  text-align: right;
+}
+
+#time-remaning span {
+  text-align: left;
+}
+
+footer {
+  position: absolute;
+  width: 100vw;
+  top: auto;
+  bottom: 0;
+}
+
+#author {
+  border: #fff 5px solid;
+  border-right: 0;
+  border-bottom: 0;
+  position: absolute;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  padding: 10px 5px 5px 10px;
+  background: linear-gradient(90deg, #d1ebff, #d1ffe5, #f7ffd1, #ffd1d2);
+  color: #000;
+  transition: 0.5s;
+  text-shadow: 0 0 3px #000;
+  text-decoration: none;
+}
+
+#author:hover {
+  text-shadow: 0 0 0 #000;
+}
+
+#menu {
+  cursor: pointer;
+  transition: 1s;
+}
+
+.active-menu {
+  animation: active-menu ease-in-out 1s;
+  padding: 10px;
+  background: #fff;
+  border-radius: 3px;
+}
+
+@keyframes active-menu {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+#background-menu {
+  background: #fff;
+  width: 20vw;
+  padding: 2vw;
+  animation: menu 0.5s ease-out;
+}
+
+@keyframes menu {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+#background-menu > div {
+  animation: menu-div 0.5s ease-out;
+}
+
+#background-menu .btn {
+  background: #000;
+  color: #fff;
+  width: auto;
+  padding: 5px;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+@keyframes menu-div {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #time-remaning {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #background-menu {
+    width: 50vw;
+    padding: 2vw;
+  }  
+}
+
+.hidden {
+  display: none;
+}
