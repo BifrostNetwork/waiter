@@ -36,8 +36,8 @@ const randomDouble = (min, max) => {
 
 const initializeImgs = () => {
   const imgs = document.querySelectorAll(".background-img");
-  const width = window.innerWidth - 100;
-  const height = window.innerHeight - 100;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
   imgs.forEach((img) => {
     img.style.left = `${Math.floor(Math.random() * width)}px`;
     img.style.top = `${Math.floor(Math.random() * height)}px`;
