@@ -89,7 +89,7 @@ const spawnIcons = (cant) => {
 
 spawnIcons(25);
 
-const endTime = "May 10 2022 20:35:00 GMT-0400";
+const endTime = "May 11 2022 20:35:00 GMT-0400";
 function getTimeRemaining() {
   const total = Date.parse(endTime) - Date.parse(new Date());
   const seconds = Math.floor((total / 1000) % 60);
